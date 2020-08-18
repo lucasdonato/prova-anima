@@ -5,6 +5,11 @@ var homeActions = {
         return this
             .navigate()
     },
+    goWeb: function (){
+        return this
+            .click('@btnAutomacaoWeb')
+
+    },
     expectedUrl: function (url) {
         return this
             .expect.url().to.contain(url)
@@ -22,6 +27,7 @@ module.exports = {
     commands: [homeActions],
     elements: {
         cardWeb : '#index-banner h4',
-        cardApi: '#index-banner2 h4'
+        cardApi: '#index-banner2 h4',
+        btnAutomacaoWeb: 'a[href="/treinamento/home"]'
     }
 }
